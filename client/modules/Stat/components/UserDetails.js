@@ -8,6 +8,22 @@ class UserDetails extends Component {
     this.images = this.importImages(require.context('./images/ranks/', false, /\.(png|jpe?g|svg)$/));
   }
 
+  importImages(source) {
+    let images = {};
+    source.keys().map((item, index) => { images[item.replace('./', '')] = source(item); });
+    return images;
+  }
+
+  getImgSrc(name){
+    return this.images[name+".png"];
+  }
+
+  getLastUpdated(input){
+    let date = new Date(parseInt(input));
+    let minutes = date.getMinutes()+" mins";
+    return minutes;
+  }
+
   renderStats(stats){
     let statsArray = [];
     Object.keys(stats).forEach((key, index)=>{
@@ -15,15 +31,7 @@ class UserDetails extends Component {
     });
     return statsArray;
   }
-  importImages(source) {
-    let images = {};
-    source.keys().map((item, index) => { images[item.replace('./', '')] = source(item); });
-    console.log(images);
-    return images;
-  }
-  getImgSrc(name){
-    return this.images[name+".png"];
-  }
+  
   renderRanks(ranks){
     let ranksArray = ranks.map((rank, index)=>{
       return (<RankItem 
@@ -34,6 +42,7 @@ class UserDetails extends Component {
     });
     return ranksArray;
   }
+
   render(){
     return (
       <div className={styles['user-details-wrapper']}>
@@ -41,7 +50,7 @@ class UserDetails extends Component {
           {this.props.user.displayName}
         </h3>
         <h5 className={ styles['last-updated']} >
-          Last Updated: {this.props.user.lastUpdated}
+          Last Updated: {this.getLastUpdated(this.props.user.lastUpdated)}
         </h5>
         <div >
           {this.renderStats(this.props.user.stats)}
