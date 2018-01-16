@@ -1,5 +1,14 @@
 .ranks-wrapper{
     border: 1px solid #eeeeee;
+    height:105px;
+    color: #4a4a4a;
+    box-sizing: border-box;
+    border: 1px solid #f3f3f3;
+    border-radius: 3px;
+    margin-top: 6px;
+    padding: 8px;
+    background: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0,0,0, 0.08);
 }
 .rank-image{
     width: 50px;
@@ -7,4 +16,29 @@
 }
 .rank-item{
     display:inline-block;
+    width:95px;
+    text-align: center;
+}
+.rank-item-img{
+    float: right;
+    margin-left: auto;
+    margin-right: 0;
+}
+.rank-type{
+    font-size : 14px;
+    line-height: 20px;
+    font-weight: 300;
+    text-align: left;
+    margin-bottom:3px;
+}
+.rank-item-value{
+    font-size:36px;
+}
+.rank-item-title{
+    font-size : 11px;
+    font-weight: 300;
+}
+.rank-rating-wrapper{
+    display:inline-block;
+    text-align: center;
 }

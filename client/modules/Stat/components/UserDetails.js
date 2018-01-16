@@ -1,5 +1,5 @@
 import React, { PropTypes, Component } from 'react';
-import styles from './css/components.css';
+import styles from './components.css';
 import StatItem from './StatItem/StatItem';
 import RankItem from './RankItem/RankItem';
 
@@ -22,7 +22,6 @@ class UserDetails extends Component {
     return images;
   }
   getImgSrc(name){
-    console.log(this.images);
     return this.images[name+".png"];
   }
   renderRanks(ranks){

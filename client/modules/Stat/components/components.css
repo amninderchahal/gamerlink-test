@@ -1,0 +1,17 @@
+.user-not-found-content{
+    text-align: center;
+    width:100%;
+    color: #9B9B9B;
+}
+.display-name{
+    font-size: 24px;
+    color: #4a4a4a;
+    line-height: 33px;
+    margin-bottom:5px;
+}
+.last-updated{
+    font-size: 10px;
+    color: #9b9b9b;
+    line-height: 15px;
+    margin-bottom:5px;
+}

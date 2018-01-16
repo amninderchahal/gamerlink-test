@@ -1,6 +1,6 @@
 import React, { PropTypes, Component } from 'react';
 
-import styles from './css/components.css';
+import styles from './components.css';
 
 export class UserNotFound extends Component {
   render(){
