@@ -9,7 +9,7 @@ import Helmet from 'react-helmet';
 import Header from './Header/Header';
 
 import { findUser } from '../statActions';
-import { bindActionCreators } from '../../../../../../../Library/Caches/typescript/2.6/node_modules/redux';
+import { bindActionCreators } from 'redux';
 
 export class App extends Component {
   constructor(props) {
